@@ -15,6 +15,10 @@ import pyarrow.parquet as pq
 import s3fs
 import os
 
+# Dash App Layout
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], title="Americas Energy by Sea")
+server = app.server
+
 # Load your data
 AWS_KEY= os.environ.get('AWS_KEY', None)
 AWS_SECRET  = os.environ.get('AWS_SECRET', None)
@@ -164,10 +168,6 @@ def create_destination_port_bar(data, selected_country=None):
     fig = px.bar(top_destination_ports, x='total_ene', y='destination_port_country', orientation='h', title="Top 10 Destination Ports")
     fig.update_layout(xaxis_title='Total Energy', yaxis_title='Port (Country)')
     return fig
-
-# Dash App Layout
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], title="Americas Energy by Sea")
-server = app.server
 
 app.layout = dbc.Container([
     dbc.Row([
