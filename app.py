@@ -194,10 +194,10 @@ app.layout = dbc.Container([
                 value='both'
             ),
             html.Br(),
-            html.Button("Reset to Default", id="reset-button", className="btn btn-primary"),
+            html.Button("Reset to Default", id="reset-button", href="https://energydemand-f7940dd21a52.herokuapp.com/",color="primary", className="m-2"),
             html.Br(),
             # Buttons with URLs
-            dbc.Button("Energy per Year All", id="home-button", href="https://logistikk.io/energyproject/plot_energy_per_year.html", color="primary", className="m-2"),
+            dbc.Button("Energy per Year All", id="home-button", href="https://logistikk.io/energyproject/plot_energy_per_year.html", color="secondary", className="m-2"),
             html.Br(),
             dbc.Button("Network Degree Centrality (Country level)", id="info-button_val1", href="https://logistikk.io/energyproject/network_country_degree_centrality.html", color="secondary", className="m-2"),
             dbc.Button("Network EigenVector Centrality (Country level)", id="info-button_val2", href="https://logistikk.io/energyproject/network_country_eigenvector_centrality.html", color="secondary", className="m-2"),
