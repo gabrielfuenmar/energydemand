@@ -124,7 +124,7 @@ def create_inbound_bar(data, selected_country=None):
     top_inbound = top_inbound.groupby(['destination_country_name'])['total_ene'].sum().nlargest(10).reset_index()
     top_inbound = top_inbound.sort_values('total_ene', ascending=True)
 
-    fig = px.bar(top_inbound, x='total_ene', y='destination_country_name', orientation='h', title="Top 10 Inbound Countries")
+    fig = px.bar(top_inbound, x='total_ene', y='destination_country_name', orientation='h', title="Top 10 Destination Countries")
     fig.update_layout(xaxis_title='Total Energy', yaxis_title='Country')
     return fig
 
@@ -137,7 +137,7 @@ def create_outbound_bar(data, selected_country=None):
     top_outbound = top_outbound.groupby(['origin_country_name'])['total_ene'].sum().nlargest(10).reset_index()
     top_outbound = top_outbound.sort_values('total_ene', ascending=True)
 
-    fig = px.bar(top_outbound, x='total_ene', y='origin_country_name', orientation='h', title="Top 10 Outbound Countries")
+    fig = px.bar(top_outbound, x='total_ene', y='origin_country_name', orientation='h', title="Top 10 Origin Countries")
     fig.update_layout(xaxis_title='Total Energy', yaxis_title='Country')
     return fig
 
