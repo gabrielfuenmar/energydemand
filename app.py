@@ -16,7 +16,8 @@ import s3fs
 import os
 
 # Dash App Layout
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP], title="Americas Energy by Sea")
+app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app.title="Americas Energy by Sea"
 server = app.server
 
 # Load your data
