@@ -193,7 +193,16 @@ app.layout = dbc.Container([
                 value='both'
             ),
             html.Br(),
-            html.Button("Reset to Default", id="reset-button", className="btn btn-primary")
+            html.Button("Reset to Default", id="reset-button", className="btn btn-primary"),
+            html.Br(),
+            # Buttons with URLs
+            dbc.Button("Energy per Year All", id="home-button", href="https://logistikk.io/energyproject/plot_energy_per_year.html", color="primary", className="m-2"),
+            html.Br(),
+            dbc.Button("Network Degree Centrality (Country level)", id="info-button", href="https://logistikk.io/energyproject/network_country_degree_centrality.html", color="secondary", className="m-2"),
+            dbc.Button("Network EigenVector Centrality (Country level)", id="info-button", href="https://logistikk.io/energyproject/network_country_eigenvector_centrality.html", color="secondary", className="m-2"),
+            html.Br(),
+            dbc.Button("Network Degree Centrality (Port level)", id="info-button", href="https://logistikk.io/energyproject/network_port_degree_centrality.html", color="secondary", className="m-2"),
+            dbc.Button("Network EigenVector Centrality (Port level)", id="info-button", href="https://logistikk.io/energyproject/network_port_eigenvector_centrality.html", color="secondary", className="m-2"),
         ], width=4),
         dbc.Col([
             html.H2("Americas Energy Demand Map"),
