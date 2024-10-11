@@ -194,7 +194,7 @@ app.layout = dbc.Container([
                 value='both'
             ),
             html.Br(),
-            html.Button("Reset to Default", id="reset-button", href="https://energydemand-f7940dd21a52.herokuapp.com/",color="primary", className="m-2"),
+            dbc.Button("Reset to Default", id="reset-button", href="https://energydemand-f7940dd21a52.herokuapp.com/",color="primary", className="m-2"),
             html.Br(),
             # Buttons with URLs
             dbc.Button("Energy per Year All", id="home-button", href="https://logistikk.io/energyproject/plot_energy_per_year.html", color="secondary", className="m-2"),
